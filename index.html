@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img
+          src="https://pears.com/wp-content/themes/pears-theme/assets/images/pear.svg"
+          alt=""
+        />
+        <h1>pears</h1>
+      </div>
+      <div class="menu-btn">&#9776;</div>
+      <div class="close-btn">&times;</div>
+      <div class="menu">
+        <h3><a href="#">showcases</a></h3>
+        <h3><a href="#">news</a></h3>
+        <h3><a href="#">documentation</a></h3>
+        <h3><a href="#">contact</a></h3>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="scroller">
+        <div class="page1">
+          <div class="left">
+            <div class="hidden-L">
+              <h1>Unleash</h1>
+            </div>
+            <div class="hidden-L">
+              <h1>the Power</h1>
+            </div>
+            <div class="hidden-L">
+              <h1>
+                of
+                <span class="inner-img">
+                  <img
+                    src="https://pears.com/wp-content/themes/pears-theme/assets/images/pear.svg"
+                    alt=""
+                  />
+                </span>
+                P2P
+              </h1>
+            </div>
+            <p class="L-para">EMPOWERING DEVELOPERS, DISRUPTING THE NORM!</p>
+            <button class="L-btn">
+              <p>LEARN TO BUILD 🍐P2P APPS</p>
+            </button>
+          </div>
+          <div class="right">
+            <div class="r-image">
+              <img
+                src="https://pears.com/wp-content/themes/pears-theme/assets/images/cover-pear-1.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="page2">
+          <div class="video-container">
+            <video id="myVideo" width="100%" height="100%" controls>
+              <source
+                src="https://cdn.pixabay.com/video/2023/10/12/184734-873923034_large.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <button id="playButton">Play Video</button>
+          </div>
+        </div>
+        <div class="page3">
+          <div class="page3-video">
+            <video
+              loop
+              autoplay
+              muted
+              src="https://cdn.pixabay.com/video/2023/01/20/147303-791344535_large.mp4"
+            ></video>
+          </div>
+          <div class="inner-page3">
+            <h1>Why Pear Runtime?</h1>
+            <div class="inner-content">
+              <h2>
+                Innovative Framework Unveiled: <br />
+                Unleash the Future of 🍐P2P Development
+              </h2>
+              <p>
+                Explore our cutting-edge runtime framework, revolutionizing the
+                🍐P2P development landscape. Bid <br />
+                farewell to traditional infrastructure costs and embrace a
+                limitless future.
+              </p>
+            </div>
+            <div class="inner-content">
+              <h2>
+                Innovative Framework Unveiled: <br />
+                Unleash the Future of 🍐P2P Development
+              </h2>
+              <p>
+                Explore our cutting-edge runtime framework, revolutionizing the
+                🍐P2P development landscape. Bid <br />
+                farewell to traditional infrastructure costs and embrace a
+                limitless future.
+              </p>
+            </div>
+            <div class="inner-content">
+              <h2>
+                Innovative Framework Unveiled: <br />
+                Unleash the Future of 🍐P2P Development
+              </h2>
+              <p>
+                Explore our cutting-edge runtime framework, revolutionizing the
+                🍐P2P development landscape. Bid <br />
+                farewell to traditional infrastructure costs and embrace a
+                limitless future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("myVideo");
+        const playButton = document.getElementById("playButton");
+
+        playButton.addEventListener("click", function () {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+
+        video.addEventListener("play", function () {
+          playButton.style.opacity = 0;
+        });
+
+        video.addEventListener("pause", function () {
+          playButton.style.opacity = 1;
+        });
+      });
+    </script>
+  </body>
+</html>
